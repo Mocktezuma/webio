@@ -1,0 +1,169 @@
+/*
+PLEASE USE LIVE SASS COMPILER
+
+PLEASE ADD THESE SETTINGS TO YOUR "settings.json"
+
+"liveSassCompile.settings.generateMap": false,
+"liveSassCompile.settings.formats": [
+    {
+        "format": "compressed",
+        "extensionName": ".min.css",
+        "savePath": null
+    }
+]
+
+Those settings are to help save up on size of the website;
+"liveSassCompile.settings.generateMap": false, dosnt save a map file for live sass compiler.
+"liveSassCompile.settings.formats" is used with the "format" setting set to compressed to 'minify' the compiled css file.
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap');
+
+/* SASS COLORS */
+$background: #FF6052;
+$foreground: #37FABE;
+$complement: #FFBEB3;
+/* SASS COLORS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+
+    outline: none;
+}
+.AppHeader {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: $background;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    border-radius: 0px 0px 16px 16px;
+    img {
+        width: 64px;
+    }
+    nav {
+        ul {
+            display: flex;
+            justify-content: space-around;
+            li {
+                list-style: none;
+                height: 100%;
+                text-align: center;
+                a {
+                    display: block;
+                    color: #fff;
+                    padding: 16px 32px;
+                    margin: 0 32px;
+                    text-decoration: none;
+                    font-size: 20px;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+.container {
+    .getQuote { // this style should be kept here so any .contact class can be styled...
+        padding: 32px;
+        margin: auto;
+        text-align: center;
+        input {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 64px 0px 0px 64px;
+            background: #f1f1f1;
+        }
+        button {
+            padding: 8px 16px;
+            background: $background;
+            border: none;
+            border-radius: 0px 64px 64px 0px;
+        }
+    }
+    .motd {
+        font-size: 32px;
+        text-align: center;
+        padding: 20% 0px;
+        height: 100vh;
+        span {
+            font-size: 16px;
+            font-family: 'Roboto Mono';
+        }
+    }
+    .about {
+        display: grid;
+        grid-template: 33% 33% 33% / auto auto auto;
+        padding: 64px 0;
+        background: $complement;
+        color: #fff;
+        .blockItem {
+            margin: 32px;
+            text-align: center;
+            h2 {
+                padding: 16px 0;
+            }
+            p {
+                line-height: 32px;
+            }
+        }
+    }
+    .projects {
+        h1 {
+            font-size: 64px;
+            text-align: center;
+            padding: 256px 0 0 0;
+        }
+        .projectContainer {
+            display: grid;
+            grid-template: 33% 33% 33% / auto auto auto;
+            .projectItem {
+                margin: 64px 32px;
+                h1 {
+                    font-size: 32px;
+                    border-bottom: 2px solid $background;
+                }
+                p {
+                    padding: 32px 0;
+                    font-size: 16px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+    footer {
+        color: #fff;
+        background: #222;
+        padding: 64px 32px;
+        //height: 256px;
+    }
+    .servicesDisplay {
+        display: flex;
+        justify-content: space-between;
+        .services {
+            // padding: 32px;
+            li {
+                padding: 64px;
+                list-style: none;
+                width: 850px;
+                p {
+                    font-family: 'Roboto Mono', monospace;
+                    padding: 16px 0;
+                }
+            }
+        }
+        .aboutServices {
+            padding: 32px;
+            margin: 32px;
+            background: linear-gradient(to bottom, $foreground, transparent);
+            border-radius: 32px 32px 0px 0px;
+            color: #000; 
+            p {
+                font-family: 'Roboto mono', monospace;
+                padding: 32px 0;
+                line-height: 32px;
+            }
+        }
+    }
+}
