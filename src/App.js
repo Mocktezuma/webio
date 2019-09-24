@@ -5,7 +5,7 @@ import './css/app.min.css';
 
 import Projects from './assets/projects';
 
-function Index() {
+function Index() { // this is the home page
 
   const [projects, setProjects] = useState ([ // use this for easier method of adding projects
     {
@@ -66,7 +66,7 @@ function Index() {
   );
 }
 
-function services() {
+function services() { // services page
   return (
     <section className="container">
       <div className="servicesDisplay">
@@ -97,7 +97,7 @@ function services() {
   );
 }
 
-function store() {
+function store() { // store page
   return (
     <section className="container">
       <h1>Store</h1>
