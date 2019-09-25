@@ -16,7 +16,6 @@ Those settings are to help save up on size of the website;
 "liveSassCompile.settings.generateMap": false, dosnt save a map file for live sass compiler.
 "liveSassCompile.settings.formats" is used with the "format" setting set to compressed to 'minify' the compiled css file.
 */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap');
 
 /* SASS COLORS */
 $primary: #FF6052;
@@ -24,6 +23,7 @@ $secondary: #37FABE;
 $complement: #FFBEB3;
 /* SASS COLORS */
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -75,167 +75,10 @@ $complement: #FFBEB3;
         }
     }
 }
-.container { // Every style here is optomized for 1920x1080p displays!
+.container {
     .largeText {
         font-size: 64px;
         font-weight: 900;
         padding: 32px 0;
-    }
-    .home-container { // this is the master-parent of the home page
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -999;
-        .motd {
-            padding: 16% 50% 0 10%;
-            h1 {
-                color: $primary;
-            }
-            p {
-                font-size: 16px;
-                font-family: 'Roboro mono', monospace;
-                line-height: 32px;
-                padding: 16px 0;
-            }
-            .ctaButton {
-                display: inline-block;
-                padding: 8px 16px;
-                margin: 16px 0;
-                border-radius: 32px;
-                background: $primary;
-                text-decoration: none;
-                color: #fff;
-            }
-        }
-        img {
-            position: absolute;
-            top: 20%;
-            right: 5%;
-            z-index: -1;
-            width: 35%;
-            box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
-        }
-    }
-    .store-container {
-        img {
-            position: absolute;
-            top: 25%;
-            right: 10%;
-            width: 30%;
-            z-index: -999;
-        }
-        .loginSeciton {
-            padding: 10% 0 0 5%;
-            margin: 32px 0 0 128px;
-            width: 512px;
-            border-radius: 0px 16px 16px 0px;
-            h1 {
-                color: $primary;
-            }
-            #logIn {
-                padding: 16px 0px 0px 0px;
-                input {
-                    display: block;
-                    width: 100%;
-                    margin: 0px 0px 32px 0px;
-                    padding: 4px;
-                    border: none;
-                    border-bottom: 2px solid $secondary;
-                    background: none;
-                }
-                button {
-                    padding: 8px 16px;
-                    margin: 0 16px 0 0;
-                    background: $primary;
-                    color: #fff;
-                    border: none;
-                }
-                #signUp {
-                    background: none;
-                    color: $secondary;
-                    font-size: 14px;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-    .signupSection-closed {
-        transform: scale(1, 1);
-        display: none;
-    }
-    .signupSection-open {
-        transform: scale(1, 1);
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        overflow: hidden;
-        .backgroundBlur {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(0,0,0,0.4);
-        }
-        h1 {
-            padding: 16px 0px;
-        }
-        #signUp {
-            animation: open .4s forwards;
-            position: absolute;
-            top: 5%;
-            right: 25%;
-            bottom: 5%;
-            left: 25%;
-            padding: 5%;
-            background: #fff;
-            input {
-                display: block;
-                width: 100%;
-                margin: 0px 0px 32px 0px;
-                padding: 4px;
-                border: none;
-                border-bottom: 2px solid $secondary;
-                background: none;
-            }
-            button {
-                padding: 8px 16px;
-                margin: 0 16px 0 0;
-                background: $primary;
-                color: #fff;
-                border: none;
-            }
-            #cancel {
-                background: none;
-                color: $primary;
-                font-size: 14px;
-                cursor: pointer;
-            }
-            #userAgreement {
-                display: inline-block;
-                width: auto;
-            }
-        }
-    }
-}
-
-/*
-*
-* All animations should be saved under this line!
-*
-*/
-
-@keyframes open {
-    0% {
-        opacity: 0;
-        transform: scale(0.8, 0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1, 1);
     }
 }

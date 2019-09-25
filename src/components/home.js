@@ -5,7 +5,7 @@ import '../css/app.min.css';
 // midea imports
 import logo from '../media/logo.png';
 
-function Index() {
+function Home() {
   return (
   <section className="home-container">
     <div className="motd">
@@ -23,4 +23,4 @@ function Index() {
   );
 }
 
-export default Index
+export default Home

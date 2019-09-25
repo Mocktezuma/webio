@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/app.min.css';
 
 function Useragreement() {
     return (

@@ -1,0 +1,88 @@
+/*
+PLEASE USE LIVE SASS COMPILER
+
+PLEASE ADD THESE SETTINGS TO YOUR "settings.json"
+
+"liveSassCompile.settings.generateMap": false,
+"liveSassCompile.settings.formats": [
+    {
+        "format": "compressed",
+        "extensionName": ".min.css",
+        "savePath": null
+    }
+]
+
+Those settings are to help save up on size of the website;
+"liveSassCompile.settings.generateMap": false, dosnt save a map file for live sass compiler.
+"liveSassCompile.settings.formats" is used with the "format" setting set to compressed to 'minify' the compiled css file.
+*/
+
+/* SASS COLORS */
+$primary: #FF6052;
+$secondary: #37FABE;
+$complement: #FFBEB3;
+/* SASS COLORS */
+
+.services-container {
+    .motd {
+        text-align: center;
+        padding: 20% 0;
+        h1 {
+            color: $primary;
+        }
+    }
+    .services {
+        padding: 32px;
+        display: grid;
+        grid-template: 50% 50% / auto auto;
+        grid-gap: 32px;
+        vertical-align: top;
+        background: $primary;
+        .service{
+            padding:32px;
+            color: #fff;
+            h1 {
+                padding: 16px 0;
+            }
+            p {
+                font-family: 'Roboto Mono', monospace;
+                font-size: 16px;
+                line-height: 32px;
+                padding: 16px 0;
+            }
+        }
+    }
+    .getStarted {
+        padding: 128px 32px;
+        text-align: center;
+        background: #222;
+        p {
+            color: #fff;
+            width: 80%;
+            margin: 0 auto 32px auto;
+            padding: 0 0 32px 0;
+            border-bottom: 2px solid #fff;
+        }
+        input {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px 0px 0px 4px;
+            width: 512px;
+        }
+        button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 0px 4px 4px 0px;
+            background: $primary;
+            color: #fff;
+        }
+        #splitter {
+            padding: 16px 0;
+            color: #fff;
+        }
+        span {
+            color: #fff;
+            padding: 16px 0;
+        }
+    }
+}

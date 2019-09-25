@@ -1,6 +1,5 @@
 import React from 'react';
 import LogIn from './child_components/login';
-import '../css/app.min.css';
 
 function Store() { // store page
     return (
