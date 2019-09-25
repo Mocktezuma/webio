@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../css/app.min.css";
 
-function Project({prjName, prjMessage, prjRedirection}) {
+function Project({projectName, projectMessage, projectImage}) {
     return (
         <div className="projectItem">
-            <h1>{prjName}</h1>
-            <p>{prjMessage}</p>
+            <h1>{projectName}</h1>
+                <img src={projectImage} alt={projectName} />
+            <p>{projectMessage}</p>
         </div>
     );
 }

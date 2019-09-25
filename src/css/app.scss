@@ -19,8 +19,8 @@ Those settings are to help save up on size of the website;
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap');
 
 /* SASS COLORS */
-$background: #FF6052;
-$foreground: #37FABE;
+$primary: #FF6052;
+$secondary: #37FABE;
 $complement: #FFBEB3;
 /* SASS COLORS */
 
@@ -36,12 +36,14 @@ $complement: #FFBEB3;
     width: 100vw;
     max-width: 100%;
     display: flex;
-    justify-content: space-around;
-    background: $background;
+    justify-content: space-between;
+    background: $primary;
     box-shadow: 0 0 8px rgba(0,0,0,0.4);
-    border-radius: 0px 0px 16px 16px;
+    //border-radius: 0px 0px 16px 16px;
+    z-index: 999;
     img {
         width: 64px;
+        margin: 0px 16px;
     }
     nav {
         ul {
@@ -54,116 +56,183 @@ $complement: #FFBEB3;
                 a {
                     display: block;
                     color: #fff;
-                    padding: 16px 32px;
-                    margin: 0 32px;
+                    padding: 8px 32px;
+                    margin: 16px;
                     text-decoration: none;
-                    font-size: 20px;
+                    font-size: 16px;
                     font-weight: 900;
                 }
+                .storeButton {
+                    border: 2px solid $complement;
+                }
+            }
+        }
+    }
+    .appheader-item-noPadding {
+        padding: 0;
+        a {
+            padding: 0;
+        }
+    }
+}
+.container { // Every style here is optomized for 1920x1080p displays!
+    .largeText {
+        font-size: 64px;
+        font-weight: 900;
+        padding: 32px 0;
+    }
+    .home-container { // this is the master-parent of the home page
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -999;
+        .motd {
+            padding: 20% 50% 0 10%;
+            h1 {
+                color: $primary;
+            }
+            p {
+                font-size: 16px;
+                font-family: 'Roboro mono', monospace;
+                line-height: 32px;
+                padding: 16px 0;
+            }
+            .ctaButton {
+                display: inline-block;
+                padding: 8px 16px;
+                margin: 16px 0;
+                border-radius: 32px;
+                background: $primary;
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+        img {
+            position: absolute;
+            top: 15%;
+            right: 10%;
+            z-index: -1;
+        }
+    }
+    .store-container {
+        img {
+            position: absolute;
+            top: 15%;
+            right: 10%;
+            z-index: -999;
+        }
+        .loginSeciton {
+            padding: 126px 32px;
+            margin: 32px 0 0 128px;
+            width: 512px;
+            border-radius: 0px 16px 16px 0px;
+            h1 {
+                color: $primary;
+            }
+            #logIn {
+                padding: 16px 0px 0px 0px;
+                input {
+                    display: block;
+                    width: 100%;
+                    margin: 16px auto;
+                    padding: 4px;
+                    border: none;
+                    border-bottom: 2px solid $secondary;
+                    background: none;
+                }
+                button {
+                    padding: 8px 16px;
+                    margin: 0 16px 0 0;
+                    background: $primary;
+                    color: #fff;
+                    border: none;
+                }
+                #signUp {
+                    background: none;
+                    color: $secondary;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .signupSection-closed {
+        transform: scale(1, 1);
+        display: none;
+    }
+    .signupSection-open {
+        transform: scale(1, 1);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        .backgroundBlur {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.4);
+        }
+        h1 {
+            padding: 16px 0px;
+        }
+        #signUp {
+            animation: open .4s forwards;
+            position: absolute;
+            top: 5%;
+            right: 25%;
+            bottom: 5%;
+            left: 25%;
+            padding: 5%;
+            background: #fff;
+            input {
+                display: block;
+                width: 100%;
+                margin: 0px 0px 32px 0px;
+                padding: 4px;
+                border: none;
+                border-bottom: 2px solid $secondary;
+                background: none;
+            }
+            button {
+                padding: 8px 16px;
+                margin: 0 16px 0 0;
+                background: $primary;
+                color: #fff;
+                border: none;
+            }
+            #cancel {
+                background: none;
+                color: $primary;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            #userAgreement {
+                display: inline-block;
+                width: auto;
             }
         }
     }
 }
-.container {
-    .getQuote { // this style should be kept here so any .contact class can be styled...
-        padding: 32px;
-        margin: auto;
-        text-align: center;
-        input {
-            padding: 8px 16px;
-            border: none;
-            border-radius: 64px 0px 0px 64px;
-            background: #f1f1f1;
-        }
-        button {
-            padding: 8px 16px;
-            background: $background;
-            border: none;
-            border-radius: 0px 64px 64px 0px;
-        }
+
+/*
+*
+* All animations should be saved under this line!
+*
+*/
+
+@keyframes open {
+    0% {
+        opacity: 0;
+        transform: scale(0.8, 0.8);
     }
-    .motd {
-        font-size: 32px;
-        text-align: center;
-        padding: 20% 0px;
-        height: 100vh;
-        span {
-            font-size: 16px;
-            font-family: 'Roboto Mono';
-        }
-    }
-    .about {
-        display: grid;
-        grid-template: 33% 33% 33% / auto auto auto;
-        padding: 64px 0;
-        background: $complement;
-        color: #fff;
-        .blockItem {
-            margin: 32px;
-            text-align: center;
-            h2 {
-                padding: 16px 0;
-            }
-            p {
-                line-height: 32px;
-            }
-        }
-    }
-    .projects {
-        h1 {
-            font-size: 64px;
-            text-align: center;
-            padding: 256px 0 0 0;
-        }
-        .projectContainer {
-            display: grid;
-            grid-template: 33% 33% 33% / auto auto auto;
-            .projectItem {
-                margin: 64px 32px;
-                h1 {
-                    font-size: 32px;
-                    border-bottom: 2px solid $background;
-                }
-                p {
-                    padding: 32px 0;
-                    font-size: 16px;
-                    line-height: 32px;
-                }
-            }
-        }
-    }
-    footer {
-        color: #fff;
-        background: #222;
-        padding: 64px 32px;
-        //height: 256px;
-    }
-    .servicesDisplay {
-        display: flex;
-        justify-content: space-between;
-        .services {
-            // padding: 32px;
-            li {
-                padding: 64px;
-                list-style: none;
-                width: 850px;
-                p {
-                    font-family: 'Roboto Mono', monospace;
-                    padding: 16px 0;
-                }
-            }
-        }
-        .aboutServices {
-            padding: 32px;
-            margin: 32px;
-            background: linear-gradient(to bottom, $foreground, transparent);
-            border-radius: 32px 32px 0px 0px;
-            color: #000; 
-            p {
-                font-family: 'Roboto mono', monospace;
-                padding: 32px 0;
-                line-height: 32px;
-            }
-        }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
     }
 }

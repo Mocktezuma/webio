@@ -1,67 +1,37 @@
 import React, {useState, component} from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import logo from './media/logo.png';
 import './css/app.min.css';
+/*
+please make sure you use a minified version of the app.css file...
+PLEASE CHECK THE "app.scss" FILE FOR INSTRUCTIONS ON HOW TO CONFIG YOUR VSCODE TO SAVE A PROPER MINIFIED CSS FILE...
+*/
+
+import logo from './media/logo.png';
+import teamworkImage from './media/teamwork.png';
+import strategyImage from './media/strategy.png';
+import sourceCodeImage from './media/source-code.png';
+import paperPlaneImage from './media/paper-plane.png';
+import monitorImage from './media/monitor.png';
+import linkIcon from './media/link.png';
+import storeImage from './media/online-store.png'
 
 import Projects from './assets/projects';
+import LogIn from './assets/login';  
 
 function Index() { // this is the home page
-
-  const [projects, setProjects] = useState ([ // use this for easier method of adding projects
-    {
-      name: "Placeholder", 
-      motd: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      name: "Placeholder", 
-      motd: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      name: "Placeholder", 
-      motd: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      name: "Placeholder", 
-      motd: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      name: "Placeholder", 
-      motd: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-      name: "Placeholder", 
-      motd: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }
-  ])
-
   return (
-  <section className="container">
+  <section className="home-container">
     <div className="motd">
-      <h1>For the modern startup's</h1>
-      <span>We strive to help other startups build their brand.</span>
+      <h1>For Modern Startups</h1>
+      <span className="largeText">
+        Webio Coop
+      </span>
+      <p>
+        One thing that every startup needs now in a modern day seciety is a website so they can build their precense in the online market, so let <em>Webio Coop</em> help you along the way from start to finish.
+      </p>
+      <Link to="/services/" className="ctaButton">Get Started</Link>
     </div>
-    <section className="about">
-      <div className="blockItem">
-        <h2>Concept & Planning</h2>
-        <p>We will help you build on your concept to push you towards the planning phase so you can get the ball rolling.</p>
-      </div>
-      <div className="blockItem">
-        <h2>UI/UX</h2>
-        <p>Our creative minds will work with you and each other to build a UI specificly built in your image and for your userbase.</p>
-      </div>
-      <div className="blockItem">
-        <h2>Deploy</h2>
-        <p>Once everything is ready and made, we will help provide ways to host your website that best fits your budget and what will be user friendly for you and your team once we hand the keys over to you.</p>
-      </div>
-    </section>
-    <section className="projects">
-      <h1>Previous Client Projects</h1>
-      <section className="projectContainer">
-        {projects.map(project => (
-          <Projects prjName={project.name} prjMessage={project.motd}/>
-        ))}
-      </section>
-    </section>
+    <img src={teamworkImage} alt="illistration of teamwork"/>
   </section>
   );
 }
@@ -69,43 +39,45 @@ function Index() { // this is the home page
 function services() { // services page
   return (
     <section className="container">
-      <div className="servicesDisplay">
-        <ul className="services">
-          <li>
-            <h1>ReBranding</h1>
-            <p>There is nothing more difficult that having to re-brand in such a saturated market, so why not let our creative thinkers help your brainstorm the best <em>new</em> aproach to making your brand stand out.</p>
-          </li>
-          <li>
-            <h1>UI/UX assistance</h1>
-            <p>You're not liking your website's landing page or overall user interface/experience, so let our talented Designers and Developers give your site a facelift to help benefit your overall user experience.</p>
-          </li>
-          <li>
-            <h1>Website Development</h1>
-            <p>You have your brand, and you know what your want everything to look like, but you don't know how to get it out in the public, that is were we can come in. Our team is diverce in Frontend, Backend, and UI developers that are eager to get there hands dirty in the nitty & gritty programming to get you up and running on the online marketplace.</p>
-          </li>
-        </ul>
-        <div className="aboutServices">
-          <h1>Our Services</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium vitae dolor voluptatem soluta. Iste, eveniet est cum aliquid velit suscipit natus debitis error voluptatem, unde nisi beatae quaerat rem quae?</p>
-          <form method="POST" className="getQuote">
-            <input type="email" name="userEmail" id="" placeholder="Business Email" required/>
-            <button type="submit">Get Started</button>
-          </form>
-        </div>
-      </div>
+      <h1>services</h1>
     </section>
   );
 }
 
 function store() { // store page
   return (
+    // only edit the "./assets/login.js" file, nothing inside here
+      <LogIn />
+  );
+}
+
+function useragreement() {
+  return (
+    <h1>User Privacy Agreement</h1>
+  );
+}
+
+function work() {
+  return (
     <section className="container">
-      <h1>Store</h1>
+      <h1>Work</h1>
     </section>
   );
 }
 
-function AppRouter() { // this is a default element, there is no need to edit this unless you need to update information in the header or footer...
+function about() {
+  return (
+    <section className="container">
+      <h1>About</h1>
+    </section>
+  );
+}
+
+function AppRouter() {
+  /*
+  "AppRouter()" is NOT to be edited unless you have to add a new link/route to a new page.
+  This component is also a default display for all pages in this react app
+  */
   return (
     <Router>
       <div className="AppHeader">
@@ -113,22 +85,27 @@ function AppRouter() { // this is a default element, there is no need to edit th
         <nav>
           <ul>
             <li>
-              <Link to="/services/">services</Link>
+              <Link to="/work/">WORK</Link>
             </li>
             <li>
-              <Link to="/store/">store</Link>
+              <Link to="/about/">ABOUT</Link>
+            </li>
+            <li>
+              <Link to="/services/">SERVICES</Link>
+            </li>
+            <li>
+              <Link to="/store/" className="storeButton">SHOP</Link>
             </li>
           </ul>
         </nav>
       </div>
       <div className="container">
-      <Route path="/" exact component={Index} />
+        <Route path="/" exact component={Index} />
+        <Route path ="/work/" component={work} />
+        <Route path ="/about/" component={about} />
         <Route path="/services/" component={services} />
         <Route path="/store/" component={store} />
-
-        <footer>
-          <span>copyright &copy; 2019 webiocoop</span>
-        </footer>
+        <Route path="/useragreement/" component={useragreement} />
       </div>
     </Router>
   );
