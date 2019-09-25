@@ -89,7 +89,7 @@ $complement: #FFBEB3;
         left: 0;
         z-index: -999;
         .motd {
-            padding: 20% 50% 0 10%;
+            padding: 16% 50% 0 10%;
             h1 {
                 color: $primary;
             }
@@ -111,20 +111,23 @@ $complement: #FFBEB3;
         }
         img {
             position: absolute;
-            top: 15%;
-            right: 10%;
+            top: 20%;
+            right: 5%;
             z-index: -1;
+            width: 35%;
+            box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
         }
     }
     .store-container {
         img {
             position: absolute;
-            top: 15%;
+            top: 25%;
             right: 10%;
+            width: 30%;
             z-index: -999;
         }
         .loginSeciton {
-            padding: 126px 32px;
+            padding: 10% 0 0 5%;
             margin: 32px 0 0 128px;
             width: 512px;
             border-radius: 0px 16px 16px 0px;
@@ -136,7 +139,7 @@ $complement: #FFBEB3;
                 input {
                     display: block;
                     width: 100%;
-                    margin: 16px auto;
+                    margin: 0px 0px 32px 0px;
                     padding: 4px;
                     border: none;
                     border-bottom: 2px solid $secondary;

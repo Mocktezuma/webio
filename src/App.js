@@ -6,6 +6,7 @@ please make sure you use a minified version of the app.css file...
 PLEASE CHECK THE "app.scss" FILE FOR INSTRUCTIONS ON HOW TO CONFIG YOUR VSCODE TO SAVE A PROPER MINIFIED CSS FILE...
 */
 
+// imports for all media assets
 import logo from './media/logo.png';
 import teamworkImage from './media/teamwork.png';
 import strategyImage from './media/strategy.png';
@@ -15,65 +16,15 @@ import monitorImage from './media/monitor.png';
 import linkIcon from './media/link.png';
 import storeImage from './media/online-store.png'
 
-import Projects from './assets/projects';
-import LogIn from './assets/login';  
+// imports for components
+import Index from './assets/index';
+import Services from './assets/services';
+import Store from './assets/store';  
+import Work from './assets/work';
+import About from './assets/about';
+import Useragreement from './assets/useragreement';
 
-function Index() { // this is the home page
-  return (
-  <section className="home-container">
-    <div className="motd">
-      <h1>For Modern Startups</h1>
-      <span className="largeText">
-        Webio Coop
-      </span>
-      <p>
-        One thing that every startup needs now in a modern day seciety is a website so they can build their precense in the online market, so let <em>Webio Coop</em> help you along the way from start to finish.
-      </p>
-      <Link to="/services/" className="ctaButton">Get Started</Link>
-    </div>
-    <img src={teamworkImage} alt="illistration of teamwork"/>
-  </section>
-  );
-}
-
-function services() { // services page
-  return (
-    <section className="container">
-      <h1>services</h1>
-    </section>
-  );
-}
-
-function store() { // store page
-  return (
-    // only edit the "./assets/login.js" file, nothing inside here
-      <LogIn />
-  );
-}
-
-function useragreement() {
-  return (
-    <h1>User Privacy Agreement</h1>
-  );
-}
-
-function work() {
-  return (
-    <section className="container">
-      <h1>Work</h1>
-    </section>
-  );
-}
-
-function about() {
-  return (
-    <section className="container">
-      <h1>About</h1>
-    </section>
-  );
-}
-
-function AppRouter() {
+function App() {
   /*
   "AppRouter()" is NOT to be edited unless you have to add a new link/route to a new page.
   This component is also a default display for all pages in this react app
@@ -101,14 +52,14 @@ function AppRouter() {
       </div>
       <div className="container">
         <Route path="/" exact component={Index} />
-        <Route path ="/work/" component={work} />
-        <Route path ="/about/" component={about} />
-        <Route path="/services/" component={services} />
-        <Route path="/store/" component={store} />
-        <Route path="/useragreement/" component={useragreement} />
+        <Route path ="/work/" component={Work} />
+        <Route path ="/about/" component={About} />
+        <Route path="/services/" component={Services} />
+        <Route path="/store/" component={Store} />
+        <Route path="/useragreement/" component={Useragreement} />
       </div>
     </Router>
   );
 }
 
-export default AppRouter;
+export default App;

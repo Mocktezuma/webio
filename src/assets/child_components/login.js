@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "../css/app.min.css";
+import "../../css/app.min.css";
 
-import storeImage from '../media/online-store.png'
+import storeImage from '../../media/online-store.png'
 
 function LogIn() {
 
