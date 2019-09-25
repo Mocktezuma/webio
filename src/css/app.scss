@@ -1,27 +1,6 @@
-/*
-PLEASE USE LIVE SASS COMPILER
-
-PLEASE ADD THESE SETTINGS TO YOUR "settings.json"
-
-"liveSassCompile.settings.generateMap": false,
-"liveSassCompile.settings.formats": [
-    {
-        "format": "compressed",
-        "extensionName": ".min.css",
-        "savePath": null
-    }
-]
-
-Those settings are to help save up on size of the website;
-"liveSassCompile.settings.generateMap": false, dosnt save a map file for live sass compiler.
-"liveSassCompile.settings.formats" is used with the "format" setting set to compressed to 'minify' the compiled css file.
-*/
-
-/* SASS COLORS */
 $primary: #FF6052;
 $secondary: #37FABE;
 $complement: #FFBEB3;
-/* SASS COLORS */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap');
 * {
