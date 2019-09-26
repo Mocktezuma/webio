@@ -3,6 +3,7 @@ $secondary: #37FABE;
 $complement: #FFBEB3;
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ $complement: #FFBEB3;
 
     outline: none;
 }
+
 .AppHeader {
     width: 100vw;
     max-width: 100%;
@@ -20,18 +22,23 @@ $complement: #FFBEB3;
     box-shadow: 0 0 8px rgba(0,0,0,0.4);
     //border-radius: 0px 0px 16px 16px;
     z-index: 999;
+
     img {
         width: 64px;
         margin: 0px 16px;
     }
+
     nav {
+
         ul {
             display: flex;
             justify-content: space-around;
+
             li {
                 list-style: none;
                 height: 100%;
                 text-align: center;
+
                 a {
                     display: block;
                     color: #fff;
@@ -41,23 +48,47 @@ $complement: #FFBEB3;
                     font-size: 16px;
                     font-weight: 900;
                 }
+
                 .storeButton {
                     border: 2px solid $complement;
                 }
             }
         }
     }
+
     .appheader-item-noPadding {
         padding: 0;
+
         a {
             padding: 0;
         }
     }
 }
-.container {
-    .largeText {
-        font-size: 64px;
-        font-weight: 900;
-        padding: 32px 0;
+
+// Global styles
+.largeText {
+    font-size: 64px;
+    font-weight: 900;
+    padding: 32px 0;
+}
+
+@media only screen and (max-width: 1366px) {
+
+    .AppHeader {
+        display: block;
+
+        nav {
+
+            ul {
+
+                li {
+
+                    a {
+                        padding: 8px;
+                        margin: 4px;
+                    }
+                }
+            }
+        }
     }
 }

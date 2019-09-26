@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import '../css/app.min.css';
 
 // midea imports
 import logo from '../media/logo.png';

@@ -1,4 +1,4 @@
-import React, {useState, component} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // import stylesheets
@@ -7,21 +7,10 @@ import './css/store.min.css';
 import './css/home.min.css';
 import './css/about.min.css';
 import './css/services.min.css';
-
-/*
-please make sure you use a minified version of the app.css file...
-PLEASE CHECK THE "app.scss" FILE FOR INSTRUCTIONS ON HOW TO CONFIG YOUR VSCODE TO SAVE A PROPER MINIFIED CSS FILE...
-*/
+import './css/work.min.css'
 
 // imports for all media assets
 import logo from './media/logo.png';
-import teamworkImage from './media/teamwork.png';
-import strategyImage from './media/strategy.png';
-import sourceCodeImage from './media/source-code.png';
-import paperPlaneImage from './media/paper-plane.png';
-import monitorImage from './media/monitor.png';
-import linkIcon from './media/link.png';
-import storeImage from './media/online-store.png';
 
 // imports for components
 import Home from './components/home';
@@ -32,10 +21,16 @@ import About from './components/about';
 import Useragreement from './components/useragreement';
 
 function App() {
-  /*
-  "App()" is NOT to be edited unless you have to add a new link/route to a new page.
-  This component is also a default display for all pages in this react app
-  */
+  
+/*
+
+This component shouldn't have to be edited unless you are adding a new page.js
+and you need to add a new <Route/> to allow a use to view that page.
+
+  - candypheonixIO
+
+*/
+
   return (
     <Router>
       <div className="AppHeader">
@@ -57,14 +52,12 @@ function App() {
           </ul>
         </nav>
       </div>
-      <div className="container">
         <Route path="/" exact component={Home} />
         <Route path ="/work/" component={Work} />
         <Route path ="/about/" component={About} />
         <Route path="/services/" component={Services} />
         <Route path="/store/" component={Store} />
         <Route path="/useragreement/" component={Useragreement} />
-      </div>
     </Router>
   );
 }

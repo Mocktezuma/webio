@@ -1,5 +1,7 @@
 import React from 'react';
 
+// media imports
+
 function About() {
     return (
       <section className="about-container">

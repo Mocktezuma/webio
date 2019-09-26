@@ -3,6 +3,7 @@ $secondary: #37FABE;
 $complement: #FFBEB3;
 
 .store-container {
+
     img {
         position: absolute;
         top: 25%;
@@ -10,16 +11,20 @@ $complement: #FFBEB3;
         width: 30%;
         z-index: -999;
     }
+
     .loginSeciton {
         padding: 10% 0 0 5%;
         margin: 32px 0 0 128px;
         width: 512px;
         border-radius: 0px 16px 16px 0px;
+
         h1 {
             color: $primary;
         }
+
         #logIn {
             padding: 16px 0px 0px 0px;
+
             input {
                 display: block;
                 width: 100%;
@@ -29,6 +34,7 @@ $complement: #FFBEB3;
                 border-bottom: 2px solid $secondary;
                 background: none;
             }
+
             button {
                 padding: 8px 16px;
                 margin: 0 16px 0 0;
@@ -36,6 +42,7 @@ $complement: #FFBEB3;
                 color: #fff;
                 border: none;
             }
+
             #signUp {
                 background: none;
                 color: $secondary;
@@ -45,10 +52,12 @@ $complement: #FFBEB3;
         }
     }
 }
+
 .signupSection-closed {
     transform: scale(1, 1);
     display: none;
 }
+
 .signupSection-open {
     transform: scale(1, 1);
     position: absolute;
@@ -57,6 +66,7 @@ $complement: #FFBEB3;
     bottom: 0;
     left: 0;
     overflow: hidden;
+    
     .backgroundBlur {
         position: absolute;
         top: 0;
@@ -65,9 +75,11 @@ $complement: #FFBEB3;
         left: 0;
         background: rgba(0,0,0,0.4);
     }
+    
     h1 {
         padding: 16px 0px;
     }
+
     #signUp {
         animation: open .4s forwards;
         position: absolute;
@@ -77,6 +89,7 @@ $complement: #FFBEB3;
         left: 25%;
         padding: 5%;
         background: #fff;
+        
         input {
             display: block;
             width: 100%;
@@ -86,6 +99,7 @@ $complement: #FFBEB3;
             border-bottom: 2px solid $secondary;
             background: none;
         }
+
         button {
             padding: 8px 16px;
             margin: 0 16px 0 0;
@@ -93,15 +107,44 @@ $complement: #FFBEB3;
             color: #fff;
             border: none;
         }
+
         #cancel {
             background: none;
             color: $primary;
             font-size: 14px;
             cursor: pointer;
         }
+
         #userAgreement {
             display: inline-block;
             width: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    
+    .store-container {
+
+        .loginSeciton {
+            padding: 64px 16px 0px 16px;
+            width: 100%;
+            margin: 0;
+        }
+
+        .signupSection-open {
+
+            #signUp {
+                position: absolute;
+                top: 5%;
+                right: 5%;
+                bottom: 5%;
+                left: 5%;
+
+                #userAgreementLabel {
+                    font-size: 12px;
+                }
+            }
         }
     }
 }
