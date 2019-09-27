@@ -22,6 +22,7 @@ function About() {
                 profile_img="https://via.placeholder.com/256"
                 github_link="https://github.com"
                 dribbble_link="https://dribbble.com"
+                behance_link="https://behance.com"
               />
 
               <Team_Icon 
@@ -30,6 +31,7 @@ function About() {
                 profile_img="https://via.placeholder.com/256"
                 github_link="https://github.com"
                 dribbble_link="https://dribbble.com"
+                behance_link="https://behance.com"
               />
 
               <Team_Icon 
@@ -38,6 +40,7 @@ function About() {
                 profile_img="https://via.placeholder.com/256"
                 github_link="https://github.com"
                 dribbble_link="https://dribbble.com"
+                behance_link="https://behance.com"
               />
             </section>
           </section>

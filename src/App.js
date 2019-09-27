@@ -7,7 +7,7 @@ import './css/store.min.css';
 import './css/home.min.css';
 import './css/about.min.css';
 import './css/services.min.css';
-import './css/work.min.css'
+import './css/work.min.css';
 
 // imports for all media assets
 import logo from './media/logo.png';

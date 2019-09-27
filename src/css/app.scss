@@ -13,6 +13,19 @@ $complement: #FFBEB3;
     outline: none;
 }
 
+body::-webkit-scrollbar {
+    width: .6em;
+}
+ 
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  //border: 2px solid #fff;
+}
+
 .AppHeader {
     width: 100vw;
     max-width: 100%;
