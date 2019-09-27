@@ -6,10 +6,113 @@ $complement: #FFBEB3;
   
     .motd {
         text-align: center;
-        padding: 18% 0;
+        padding: 20% 0;
      
         h1 {
             color: $primary;
+        }
+    }
+
+    .aboutBody {
+
+        .theTeam {
+            background: #222;
+            color: #fff;
+            .teamHeader {
+                color: $primary;
+                font-size: 32px;
+                text-align: center;
+                padding: 32px 0;
+                border-bottom: 2px solid $primary;
+            }
+            
+                .teamMembers {
+                    display: grid;
+                    grid-template: 33% 33% 33% / auto auto auto;
+                    padding: 64px 16px;
+
+                    h1 {
+                        color: $secondary;
+                    }
+
+                    .teamMate {
+                        padding: 16px;
+
+                        .bio {
+                            display: flex;
+                            padding: 0px 0px 16px 0px;
+
+                            .teamMemberIcon {
+                                border-radius: 100%;
+                                height: 128px;
+                            }
+
+                            .desc {
+                                padding: 8px;
+
+                                .name {
+                                    font-size: 20px;
+                                }
+                
+                                .notes {
+                                    font-family: 'Roboto Mono', monospace;
+                                    padding: 16px 0;
+                                }
+                            }
+                        }
+
+                        .socials {
+                            display: flex;
+                            justify-content: space-evenly;
+                            list-style: none;
+                            background: $complement;
+                            border-radius: 32px;
+
+                            li {
+                                padding: 8px;
+
+                                a {
+                                    text-decoration: none;
+                                    color: #222;
+                                }
+            
+                                img {
+                                    width: 24px;
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .about-container {
+
+        .aboutBody {
+            
+            .theTeam {
+                
+                .teamMembers {
+                    grid-template: 50% 50% / auto auto;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .about-container {
+
+        .aboutBody {
+            
+            .theTeam {
+                
+                .teamMembers {
+                    display: block;
+                }
+            }
         }
     }
 }

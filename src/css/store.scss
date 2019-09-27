@@ -122,9 +122,13 @@ $complement: #FFBEB3;
     }
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 720px) {
     
     .store-container {
+
+        img {
+            display: none;
+        }
 
         .loginSeciton {
             padding: 64px 16px 0px 16px;
