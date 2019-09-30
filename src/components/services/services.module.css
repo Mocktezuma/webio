@@ -55,15 +55,11 @@
 
 .getStarted form input {
 	background: #fff;
-	border-top-left-radius: 0.9rem;
-	border-bottom-left-radius: 0.9rem;
 }
 
 .getStarted form button {
 	background: #ff6052;
 	color: #fff;
-	border-top-right-radius: 0.9rem;
-	border-bottom-right-radius: 0.9rem;
 }
 
 .getStarted h1 {
