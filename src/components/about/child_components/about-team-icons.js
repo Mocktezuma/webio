@@ -1,9 +1,11 @@
 import React from 'react';
 
 // media imports
-import github from '../../media/icons8-github-48.png';
-import dribbble from '../../media/icons8-dribbble-30.png';
-import behance from '../../media/icons8-behance-48.png';
+import github from '../../../media/icons8-github-48.png';
+import dribbble from '../../../media/icons8-dribbble-30.png';
+import behance from '../../../media/icons8-behance-48.png';
+
+import style from '../about.module.css';
 
 
 function Team_Icon ({
@@ -15,15 +17,15 @@ function Team_Icon ({
     behance_link
 }) {
     return (
-        <div className="teamMate">
-            <div className="bio">
-                <img src={profile_img} alt="" className="teamMemberIcon"/>
-                <div className="desc">
-                    <h1 className="name">{name}</h1>
-                    <p className="notes">{notes}</p>
+        <div className={style.teamMate}>
+            <div className={style.bio}>
+                <img src={profile_img} alt="" className={style.teamIcon}/>
+                <div className={style.desc}>
+                    <h1 className={style.name}>{name}</h1>
+                    <p className={style.notes}>{notes}</p>
                 </div>
             </div>
-            <ul className="socials">
+            <ul className={style.socials}>
                 <li>
                     <img src={github} alt="github icon from icons8.com"/>
                     <a href={github_link} target="_blank" rel="noopener noreferrer">Github</a>

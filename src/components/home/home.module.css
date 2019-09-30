@@ -1,0 +1,53 @@
+.motd {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 10%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.body {
+    margin: 4em 0 0 0;
+}
+
+.largeText {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+#homeLogo {
+    width: 35%;
+    position: absolute;
+    top: .05em;
+    right: 0;
+}
+
+.body a {
+    display: inline-block;
+    background: #ff6052;
+    padding: 16px 32px;
+    margin: 16px 0 0 0;
+}
+
+/* child elements of ".motd"
+----------------------------------------*/
+
+.motd  p {
+    font-family: 'Roboto mono', monospace;
+    line-height: 32px;
+    width: 512px;
+    margin: 32px 0;
+}
+
+.motd h1 {
+    color: #ff6052;
+}
+
+@media only screen and (max-width: 720px) {
+    #homeLogo {
+        display: none;
+    }
+}

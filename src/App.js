@@ -1,24 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-// import stylesheets
-import './css/app.min.css';
-import './css/store.min.css';
-import './css/home.min.css';
-import './css/about.min.css';
-import './css/services.min.css';
-import './css/work.min.css';
-
-// imports for all media assets
-import logo from './media/logo.png';
-
 // imports for components
-import Home from './components/home';
-import Services from './components/services';
-import Store from './components/store';  
-import Work from './components/work';
-import About from './components/about';
-import Useragreement from './components/useragreement';
+import Home from './components/home/index';
+import Services from './components/services/index';
+import Store from './components/store/index';  
+import Work from './components/work/index';
+import About from './components/about/index';
+import Useragreement from './components/useragreement/index';
+
+import "./app.css";
 
 function App() {
   
@@ -33,10 +24,12 @@ and you need to add a new <Route/> to allow a use to view that page.
 
   return (
     <Router>
-      <div className="AppHeader">
-      <Link to="/"><img src={logo} alt="wbeio coop logo."/></Link>
+      <div className="appHeader">
         <nav>
           <ul>
+            <li>
+              <Link to="/">HOME</Link>
+            </li>
             <li>
               <Link to="/work/">WORK</Link>
             </li>

@@ -1,0 +1,91 @@
+.motd {
+    margin: 10%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.largeText {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.wrapper {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.teamHeader {
+    text-align: center;
+    padding: 0 0 32px 0;
+    font-size: 32px;
+    color: #ff6052;
+}
+
+.team {
+    background: #222;
+    padding: 32px;
+}
+
+.teamMembers {
+    display: grid;
+    grid-template: 33% 33% 33% / auto auto auto;
+}
+
+.teamMate {
+    padding: 32px;
+}
+
+.teamIcon {
+    height: 64px;
+    float: left;
+    padding: 0 16px 0 0;
+    margin: 16px auto;
+}
+
+.name {
+    color: #fff;
+    font-size: 24px;
+}
+
+.notes {
+    color: #fff;
+    font-family: 'Roboto mono', monospace;
+    font-size: 16px;
+}
+
+.socials {
+    background: #ff6052;
+    clear: both;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px;
+}
+
+/* child elements of ".socials"
+-----------------------------------------*/
+
+.socials li {
+    list-style: none;
+}
+
+.socials li img {
+    height: 32px;
+}
+
+/* child elements of ".motd"
+----------------------------------------*/
+
+.motd  p {
+    font-family: 'Roboto mono', monospace;
+    line-height: 32px;
+    width: 512px;
+    margin: 32px 0;
+}
+
+.motd h1 {
+    color: #ff6052;
+}
+
+@media only screen and (max-width: 720px) {
+    .teamMembers {
+        display: block;
+    }
+}

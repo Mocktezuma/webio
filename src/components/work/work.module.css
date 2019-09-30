@@ -1,0 +1,23 @@
+.motd {
+    margin: 10%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.largeText {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+/* child elements of ".motd"
+----------------------------------------*/
+
+.motd  p {
+    font-family: 'Roboto mono', monospace;
+    line-height: 32px;
+    width: 512px;
+    margin: 32px 0;
+}
+
+.motd h1 {
+    color: #ff6052;
+}

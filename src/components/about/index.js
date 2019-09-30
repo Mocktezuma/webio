@@ -2,20 +2,19 @@ import React from 'react';
 
 // component imports
 import Team_Icon from './child_components/about-team-icons';
-
-// media imports
+import style from './about.module.css';
 
 function About() {
     return (
-      <section className="about-container">
-        <div className="motd">
+      <section className="container">
+        <div className={style.motd}>
           <h1>ABOUT US</h1>
-          <span className="largeText">Get to know our team</span>
+          <span className={style.largeText}>Get to know our team</span>
         </div>
-        <section className="aboutBody">
-          <section className="theTeam">
-            <h1 className="teamHeader">THE TEAM</h1>
-            <section className="teamMembers">
+        <section className={style.wrapper}>
+          <section className={style.team}>
+            <h1 className={style.teamHeader}>THE TEAM</h1>
+            <section className={style.teamMembers}>
               <Team_Icon 
                 name="placeholder"
                 notes="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
