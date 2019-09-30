@@ -1,79 +1,82 @@
 .signupSection-closed {
-    display: none;
+	display: none;
 }
 
 .signupSection-open {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .backgroundBlur {
-    position: absolute;
-    background: rgba(0,0,0,0.5);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.5);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .signUp {
-    animation: open .2s forwards;
-    font-family: 'Montserrat', sans-serif;
-    background: #fff;
-    position: absolute;
-    top: 15%;
-    right: 15%;
-    bottom: 15%;
-    left: 15%;
-    padding: 32px;
+	animation: open .2s forwards;
+	font-family: 'Montserrat', sans-serif;
+	background: #fff;
+	position: absolute;
+	top: 15%;
+	right: 15%;
+	bottom: 15%;
+	left: 15%;
+	padding: 32px;
 }
 
 .signUp h1 {
-    color: #ff6052;
+	color: #ff6052;
 }
 
 .signUp input {
-    display: block;
-    padding: 8px 16px;
-    margin: 0 0 32px 0;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #37fabe;
+	display: block;
+	padding: 8px 16px;
+	margin: 0 0 32px 0;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #37fabe;
 }
 
 .signUp input[type=checkbox] {
-    display: inline;
-    width: inherit;
+	display: inline;
+	width: inherit;
 }
 
 .signUp a {
-    color: #000;
-    font-weight: 900;
-    text-decoration: underline;
+	color: #000;
+	font-weight: 900;
+	text-decoration: underline;
 }
 
 .signUp button {
-    background: #ff6052;
-    color: #fff;
-    border: none; 
-    padding: 8px 16px;
-    margin: 0 16px 0 0;
+	background: #ff6052;
+	color: #fff;
+	border: none;
+	padding: 8px 16px;
+	margin: 0 16px 0 0;
+}
+button {
+	border-radius: 0.45rem;
 }
 
 /* keyframes
 ---------------------------------------------------------------------*/
 
 @keyframes open {
-    0% {
-        opacity: 0;
-        transform: scale(.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+	0% {
+		opacity: 0;
+		transform: scale(.8);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
 }

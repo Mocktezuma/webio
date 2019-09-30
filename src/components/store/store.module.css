@@ -1,50 +1,51 @@
 .container {
-    margin: 10%;
+	margin: 10%;
 }
 
 .storeImage {
-    position: absolute;
-    top: 15%;
-    right: 0;
+	position: absolute;
+	top: 15%;
+	right: 0;
 }
 
 .login {
-    width: 512px;
-    font-family: 'Montserrat', sans-serif;
+	width: 512px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .login h1 {
-    color: #ff6052;
+	color: #ff6052;
 }
 
 .largeText {
-    font-size: 64px;
-    font-weight: 900;
+	font-size: 64px;
+	font-weight: 900;
 }
 
 .loginForm {
-    margin: 32px 0 0 0;
+	margin: 32px 0 0 0;
 }
 
 .loginForm input {
-    display: block;
-    padding: 8px;
-    margin: 0 0 32px 0;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #37fabe;
+	display: block;
+	padding: 8px;
+	margin: 0 0 32px 0;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #37fabe;
 }
 
 .loginForm button {
-    padding: 8px;
-    margin: 0 32px 0 0;
-    border: none;
-    background: #ff6052;
-    color: #fff;
+	padding: 8px;
+	margin: 0 32px 0 0;
+	border: none;
+	background: #ff6052;
+	color: #fff;
+	border-radius: 0.45rem;
 }
 
 @media only screen and (max-width: 720px) {
-    .storeImage {
-        display: none;
-    }
+	.storeImage {
+		display: none;
+	}
 }
