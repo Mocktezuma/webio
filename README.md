@@ -6,8 +6,7 @@ WebApp build on React
 
 ----
 
-## `Dev Notes`
+### `Dev Notes`
 
-1) __Recommended:__ Make sure that you have "Live Sass Compiler" settings in "settings.json" have `"liveSassCompile.settings.generateMap": false` and `"liveSassCompile.settings.formats": [{"format": "compressed","extensionName": ".min.css","savePath": null}]` _This is to avoide minor conflicts during development and to optomize development assets while using sass_
-
+1) switched over from "sass" to "css" make sure that you edit css files that directly change styles in the component with the ".module.css" as it's extention, otherwise you are just creating **Global** styles.
 ----
