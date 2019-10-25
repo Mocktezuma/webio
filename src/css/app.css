@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto+Mono&display=swap");
+.App__Container {
+  background: linear-gradient(45deg, #6fd6ff, #73ffea);
+  font-family: "Open Sans", sans-serif;
+  color: #222;
+}
+
+.App__Container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 32px;
+}
+
+.App__Container ul li {
+  list-style-type: none;
+}
+
+.App__Container ul img {
+  display: inline;
+  width: 64px;
+}
+
+.App__Container .client__button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 16px 0;
+  background: #6fd6ff;
+  border-radius: 4px;
+}
+
+.App__Container .motd {
+  text-align: center;
+  margin: 256px 0;
+}
+
+.App__Container .large__text {
+  font-size: 128px;
+  border-bottom: 4px solid #f1f1f1;
+  padding: 16px 0px 16px 0px;
+  margin: 16px 0px 16px 0px;
+  display: inline-block;
+}
+
+.App__Container .motd__textBody {
+  font-size: 32px;
+  width: 800px;
+  margin: auto;
+}
+
+.App__Container .about__textBody {
+  text-align: left;
+  width: 1024px;
+  margin: auto;
+  padding: 32px 0 32px 0;
+}
+
+.App__Container .about__textBody h1 {
+  border-bottom: 4px solid #f1f1f1;
+  width: 512px;
+  margin: 16px;
+  font-size: 64px;
+}
+
+.App__Container .about__textBody p {
+  line-height: 64px;
+}
+
+.App__Container #services__wrapper {
+  text-align: center;
+  padding: 256px 0;
+}
+
+.App__Container #services__wrapper .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.App__Container #services__wrapper .service__item {
+  padding: 32px;
+  background: #f1f1f1;
+  width: 512px;
+  border-radius: 4px;
+}
+
+.App__Container #services__wrapper p {
+  padding: 16px 0;
+  line-height: 32px;
+}
+
+.App__Container .app__footer {
+  background: #222;
+  padding: 32px;
+  color: #f1f1f1;
+}
