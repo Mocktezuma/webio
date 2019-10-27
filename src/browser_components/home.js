@@ -38,10 +38,21 @@ export default function Home() {
 			<Services />
 			<div className="app__footer">
 				<h4>WebioCoop &copy; 2019</h4>
+				<hr />
+				<ul>
+					<li>
+						<Link to="/policy">Privacy Policy</Link>
+					</li>
+					<li>
+						<Link to="/client">Client Login</Link>
+					</li>
+				</ul>
 			</div>
 		</section>
 	);
 }
+
+// About section
 
 function About() {
 	return (
@@ -92,6 +103,8 @@ function About() {
 	);
 }
 
+// Services section
+
 function Services() {
 	return (
 		<section id="services__wrapper">
@@ -101,25 +114,33 @@ function Services() {
 					service__image={house}
 					service__name="Startup"
 					service__details="For the smaller, garage startups that need to get a quick website and brand up and running."
+					service__number="/getstarted?item1"
 				/>
 
 				<Service_Item
 					service__image={shop}
 					service__name="Small Shop"
 					service__details="You already have something started, but you just need a website to help make shopping at your store more simple."
+					service__number="/getstarted?item2"
 				/>
 
 				<Service_Item
 					service__image={corperation}
 					service__name="Enterprise"
 					service__details="Not liking your old design or brand? then let us help you get a fresh start!"
+					service__number="/getstarted?item3"
 				/>
 			</div>
 		</section>
 	);
 }
 
-function Service_Item({ service__name, service__details, service__image }) {
+function Service_Item({
+	service__name,
+	service__details,
+	service__image,
+	service__number
+}) {
 	return (
 		<div className="service__item simple__shadow">
 			<div className="item__head">
@@ -127,7 +148,7 @@ function Service_Item({ service__name, service__details, service__image }) {
 				<h1>{service__name}</h1>
 			</div>
 			<p>{service__details}</p>
-			<Link to="/getstarted?item1">
+			<Link to={service__number}>
 				<span className="button__medium">Get Started</span>
 			</Link>
 		</div>

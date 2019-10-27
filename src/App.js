@@ -9,6 +9,7 @@ import logo from "./images/transparent1024-2.png";
 import Home from "./browser_components/home";
 import Client from "./browser_components/client";
 import Get_Started from "./browser_components/get_started";
+import Policy from "./browser_components/policy";
 
 function App() {
 	return (
@@ -35,6 +36,9 @@ function App() {
 					</Route>
 					<Route path="/getstarted">
 						<Get_Started />
+					</Route>
+					<Route path="/policy">
+						<Policy />
 					</Route>
 					<Route path="/">
 						<Home />
